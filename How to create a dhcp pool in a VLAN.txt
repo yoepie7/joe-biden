@@ -1,0 +1,37 @@
+To create a DHCP pool in a VLAN using the Command Line Interface (CLI) in Cisco Packet Tracer, follow these steps:
+
+Step 1: Access the Switch CLI
+Double-click on the switch where the VLAN is configured to open the configuration window. Click on the "CLI" tab to access the Command Line Interface.
+
+Step 2: Enter VLAN Configuration Mode
+To enter the VLAN configuration mode, use the following command:
+```
+vlan vlan_id
+```
+Replace `vlan_id` with the VLAN ID of the VLAN in which you want to create the DHCP pool.
+
+Step 3: Configure the DHCP Pool
+To configure the DHCP pool, use the following commands:
+```
+ip dhcp pool pool_name
+network network_address subnet_mask
+default-router default_gateway
+dns-server dns_server_address
+```
+- Replace `pool_name` with a name for the DHCP pool.
+- Replace `network_address` with the network address of the VLAN.
+- Replace `subnet_mask` with the subnet mask of the VLAN.
+- Replace `default_gateway` with the default gateway (router) IP address for the VLAN.
+- Replace `dns_server_address` with the IP address of the DNS server to be used by DHCP clients.
+
+Step 4: Save the Configuration
+To save the configuration, type the following command:
+```
+write
+```
+This will save the configuration to the switch's memory.
+
+Step 5: Test the DHCP Pool
+Once you have created the DHCP pool, connect a device (PC) to the VLAN and verify that it receives an IP address from the DHCP pool.
+
+That's it! You have now created a DHCP pool in a VLAN using the CLI in Cisco Packet Tracer. Remember to save your project so you can come back to it later if needed.

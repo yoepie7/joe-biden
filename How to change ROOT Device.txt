@@ -1,0 +1,47 @@
+To change the root bridge to another switch in a Spanning Tree Protocol (STP) network, you can follow these steps:
+
+1. Identify the current root bridge:
+   - Enter the privileged EXEC mode:
+     ```
+     enable
+     ```
+   - View the current STP information:
+     ```
+     show spanning-tree
+     ```
+   - Look for the line that starts with "Root ID" or "Bridge ID." It will display the current root bridge's MAC address and priority.
+
+2. Identify the switch you want to become the new root bridge:
+   - Review the list of switches connected in your network topology.
+   - Determine the desired switch that you want to set as the new root bridge.
+
+3. Access the CLI of the desired switch:
+   - Enter the privileged EXEC mode:
+     ```
+     enable
+     ```
+   - Enter the global configuration mode:
+     ```
+     configure terminal
+     ```
+
+4. Configure the new priority for the desired switch:
+   - Set the priority value lower than the current root bridge's priority. The default priority value is 32768.
+     ```
+     spanning-tree vlan <vlan_id> priority <new_priority>
+     ```
+   - Replace `<vlan_id>` with the VLAN ID on which you want to change the root bridge priority.
+   - Replace `<new_priority>` with a lower priority value than the current root bridge's priority.
+
+5. Verify the changes:
+   - Enter the privileged EXEC mode:
+     ```
+     enable
+     ```
+   - View the updated STP information:
+     ```
+     show spanning-tree
+     ```
+   - Check the "Root ID" or "Bridge ID" line to confirm that the new switch has become the root bridge.
+
+Remember that changing the root bridge may impact the network's spanning tree topology. It's recommended to plan and test any changes carefully to avoid disruptions in the network.

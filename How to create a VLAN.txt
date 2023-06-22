@@ -1,0 +1,47 @@
+To create a VLAN and change its name, IP address, and DHCP trunk configuration in Cisco Packet Tracer, follow these steps:
+
+Step 1: Access the Switch CLI
+Double-click on the switch to open the configuration window. Click on the "CLI" tab to access the Command Line Interface.
+
+Step 2: Create a VLAN
+To create a VLAN, use the following command:
+```
+vlan vlan_id
+```
+Replace `vlan_id` with the desired VLAN ID. Repeat this command for each VLAN you want to create.
+
+Step 3: Change VLAN Name
+To change the name of a VLAN, use the following command:
+```
+vlan vlan_id
+name vlan_name
+```
+Replace `vlan_id` with the VLAN ID of the VLAN you want to rename, and `vlan_name` with the desired name for the VLAN.
+
+Step 4: Assign IP Address
+To assign an IP address to a VLAN, use the following command:
+```
+interface vlan vlan_id
+ip address ip_address subnet_mask
+```
+Replace `vlan_id` with the VLAN ID of the VLAN you want to configure, `ip_address` with the desired IP address, and `subnet_mask` with the subnet mask you want to use.
+
+Step 5: Enable DHCP Trunk
+To enable DHCP trunking on a VLAN, use the following command:
+```
+interface vlan vlan_id
+ip helper-address dhcp_server_ip
+```
+Replace `vlan_id` with the VLAN ID of the VLAN you want to configure, and `dhcp_server_ip` with the IP address of the DHCP server.
+
+Step 6: Save the Configuration
+To save the configuration, type the following command:
+```
+write
+```
+This will save the configuration to the switch's memory.
+
+Step 7: Test the Configuration
+Once you have completed the VLAN configuration, you can test the connectivity and DHCP functionality within the VLAN.
+
+That's it! You have now created a VLAN, changed its name, IP address, and configured DHCP trunking in Cisco Packet Tracer. Remember to save your project so you can come back to it later if needed.

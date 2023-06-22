@@ -1,0 +1,54 @@
+Om VTP (VLAN Trunking Protocol) in Cisco Packet Tracer te configureren, moet je de volgende stappen volgen:
+
+1. Start met het configureren van een VTP-server. Dit kan op een switch of router zijn. Open de CLI van het apparaat.
+
+2. Ga naar de configuratiemodus:
+   ```
+   enable
+   configure terminal
+   ```
+
+3. Stel de VTP-modus in op server:
+   ```
+   vtp mode server
+   ```
+
+4. Wijs een VTP-domein toe (bijvoorbeeld "mydomain"):
+   ```
+   vtp domain mydomain
+   ```
+
+   Zorg ervoor dat alle switches in het netwerk hetzelfde VTP-domein hebben.
+
+5. Stel het VTP-wachtwoord in (optioneel):
+   ```
+   vtp password password123
+   ```
+
+   Vervang "password123" door het gewenste wachtwoord.
+
+6. Sla de configuratie op en verlaat de configuratiemodus:
+   ```
+   end
+   copy running-config startup-config
+   ```
+
+7. Herhaal dezelfde stappen op andere switches in het netwerk om ze ook als VTP-servers te configureren met hetzelfde VTP-domein en wachtwoord.
+
+8. Voeg VTP-clients toe (optioneel):
+   Je kunt switches als VTP-clients configureren als je wilt dat ze de VLAN-informatie ontvangen van de VTP-servers. Stel hiervoor de VTP-modus in op "client" op de gewenste switches:
+   ```
+   vtp mode client
+   ```
+
+   Zorg ervoor dat deze switches hetzelfde VTP-domein en wachtwoord hebben als de VTP-servers.
+
+9. Sla de configuratie op en verlaat de configuratiemodus:
+   ```
+   end
+   copy running-config startup-config
+   ```
+
+Op deze manier kun je VTP configureren in Cisco Packet Tracer. Zorg ervoor dat alle switches in het netwerk de juiste VTP-modus, domein en eventueel wachtwoord hebben om correct met elkaar te communiceren en VLAN-informatie te delen.
+
+Als je nog verdere vragen hebt, laat het me dan weten!

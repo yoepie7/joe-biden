@@ -1,0 +1,44 @@
+Om trunk-poorten aan te maken in Cisco Packet Tracer, volg je deze stappen:
+
+Stap 1: Toegang tot de switch-CLI
+Dubbelklik op de switch waarop je trunk-poorten wilt maken om het configuratiescherm te openen. Klik op het tabblad "CLI" om toegang te krijgen tot de Command Line Interface.
+
+Stap 2: Selecteer de poort(en)
+Gebruik het volgende commando om een poort te selecteren voor de trunk-configuratie:
+```
+interface interface_name
+```
+Vervang `interface_name` door de daadwerkelijke naam van de poort (bijv. `FastEthernet0/1` of `GigabitEthernet0/1`).
+
+Stap 3: Configureer de poort(en) als trunk
+Gebruik het volgende commando om de poort(en) te configureren als trunk-poorten:
+```
+switchport mode trunk
+```
+Dit commando configureert de geselecteerde poort(en) als trunk-poorten, die meerdere VLAN-verkeer kunnen doorlaten.
+
+Stap 4: Optioneel: Stel de native VLAN in
+Als je een native VLAN wilt instellen voor de trunk-poort(en), gebruik je het volgende commando:
+```
+switchport trunk native vlan vlan_id
+```
+Vervang `vlan_id` door het gewenste VLAN ID voor het native VLAN.
+
+Stap 5: Optioneel: Voeg VLANs toe aan de trunk
+Als je specifieke VLANs wilt toewijzen aan de trunk-poort(en), gebruik je het volgende commando:
+```
+switchport trunk allowed vlan vlan_id_list
+```
+Vervang `vlan_id_list` door de lijst van VLAN ID's die je wilt toewijzen, gescheiden door komma's. Bijvoorbeeld: `vlan 10,20,30`.
+
+Stap 6: Sla de configuratie op
+Om de configuratie op te slaan, typ je het volgende commando:
+```
+write
+```
+Dit slaat de configuratie op in het geheugen van de switch.
+
+Stap 7: Test de trunk-poorten
+Zorg ervoor dat de aangesloten apparaten en VLANs correct kunnen communiceren via de trunk-poorten. Controleer of het verkeer van verschillende VLANs correct wordt doorgestuurd.
+
+Dat is alles! Je hebt nu trunk-poorten aangemaakt in Cisco Packet Tracer. Vergeet niet je project op te slaan, zodat je er later op kunt terugkomen indien nodig.

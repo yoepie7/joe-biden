@@ -1,0 +1,35 @@
+In Cisco Packet Tracer, there are several cable types available to connect devices. Here's an overview of the cable types and the devices they can be connected with:
+
+1. Copper Straight-through Cable:
+   - Description: This cable type is used to connect devices of the same type (e.g., PC to switch, router to switch) or devices that operate in different layers of the OSI model.
+   - Devices: PCs, switches, routers, servers, access points.
+
+2. Copper Crossover Cable:
+   - Description: This cable type is used to connect devices of the same type directly (e.g., PC to PC, switch to switch) without the need for a hub or switch.
+   - Devices: PCs, switches.
+
+3. Copper Console Cable:
+   - Description: This cable type is used to establish a direct connection between a computer and a networking device for management purposes.
+   - Devices: PCs, routers, switches.
+
+4. Copper Rolled Cable:
+   - Description: This cable type is used to connect a modem to the serial port of a router for dial-up connectivity.
+   - Devices: Modems, routers.
+
+5. Fiber Optic Cable (Single Mode and Multi-Mode):
+   - Description: Fiber optic cables transmit data using light signals, providing high-speed and long-distance connectivity.
+   - Devices: Fiber optic transceivers, switches, routers.
+
+6. Serial DCE and DTE Cables:
+   - Description: These cable types are used for serial connections between networking devices.
+   - Devices: Routers, switches.
+
+7. Coaxial Cable:
+   - Description: This cable type is used for cable television and broadband internet connections.
+   - Devices: Modems, routers.
+
+8. Phone Line:
+   - Description: This cable type represents telephone lines used for voice communications.
+   - Devices: Analog phones, fax machines, modems.
+
+It's important to note that the availability of these cable types might vary depending on the specific version of Cisco Packet Tracer you are using.
